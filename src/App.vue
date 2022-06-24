@@ -1,14 +1,16 @@
 <template>
 <div id="app">
   <TheHeader/>
+  <AlbumCards/>
 </div>
 </template>
 
 <script>
 import TheHeader from './components/TheHeader.vue'
+import AlbumCards from './components/AlbumCards.vue'
 export default {
   name: 'App',
-  components: {TheHeader,}
+  components: {TheHeader, AlbumCards}
 }
 </script>
 
