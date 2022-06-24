@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-  <TheHeader/>
+  <TheHeader fetchGenre/>
   <AlbumCards/>
 </div>
 </template>
