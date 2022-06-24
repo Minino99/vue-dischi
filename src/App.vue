@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-  <TheHeader fetchGenre/>
+  <TheHeader :fetchGenre="genreInput"/>
   <AlbumCards/>
 </div>
 </template>
@@ -10,7 +10,12 @@ import TheHeader from './components/TheHeader.vue'
 import AlbumCards from './components/AlbumCards.vue'
 export default {
   name: 'App',
-  components: {TheHeader, AlbumCards}
+  components: {TheHeader, AlbumCards},
+  methods: {
+    genreInput(genre) {
+      console.log(genre)
+    }
+  },
 }
 </script>
 

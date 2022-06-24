@@ -17,7 +17,7 @@
           <option value="jazz">Jazz</option>
           <option value="metal">Metal</option>
         </select>
-        <button type="button" class="btn btn-outline-success" @click="$emit('selectedGenre')">Filtra per genere</button>
+        <button type="button" class="btn btn-outline-success" @click="$emit('fetchGenre', selectedGenre)">Filtra per genere</button>
       </div>
     </div>
   </div>
