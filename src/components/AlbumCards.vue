@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row align-items-center justify-content-center gap-5">
         <div
-          v-for="album in Albums"
+          v-for="album in filterAlbums"
           :key="album.title"
           class="col-2 albumcontainer"
         >
@@ -37,13 +37,24 @@ export default {
         .get("https://flynn.boolean.careers/exercises/api/array/music")
         .then((response) => {
           this.Albums = response.data.response;
-          console.log(this.Albums);
         });
     },
   },
   mounted() {
     this.fetchDisks();
   },
+  props: {
+    filtergenre: String,
+  },
+  computed:{
+    filterAlbums(){
+      if (this.filtergenre === ""){
+        return this.Albums;
+      }else{
+        return this.Albums.filter(album => album.genre.toLowerCase() === this.filtergenre);
+      }
+    }
+  }
 };
 </script>
 

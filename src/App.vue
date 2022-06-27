@@ -1,28 +1,15 @@
 <template>
-<div id="app">
-  <TheHeader :fetchGenre="genreInput"/>
-  <AlbumCards/>
+<div>
+  <WholeApp/>
 </div>
 </template>
 
 <script>
-import TheHeader from './components/TheHeader.vue'
-import AlbumCards from './components/AlbumCards.vue'
+import WholeApp from './components/WholeApp.vue'
 export default {
   name: 'App',
-  components: {TheHeader, AlbumCards},
-  methods: {
-    genreInput(genre) {
-      console.log(genre)
-    }
-  },
+  components: {WholeApp},
 }
 </script>
 
-<style lang="scss">
 
-#app{
-  height: 100vh;
-  background-color: #1E2D3B;
-  }
-</style>
